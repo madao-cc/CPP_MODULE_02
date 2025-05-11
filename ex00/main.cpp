@@ -6,12 +6,11 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:56:30 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 09:39:29 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/10 18:23:54 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 #include <iostream>
 
 int	main(void)
