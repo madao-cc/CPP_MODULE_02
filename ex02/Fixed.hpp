@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 10:08:09 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 10:27:43 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 15:34:39 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,12 @@ class	Fixed
 		Fixed	&operator--();
 		Fixed	operator--(int);
 
+		static Fixed	&min(Fixed &a, Fixed &b);
 		static const Fixed	&min(Fixed const &a, Fixed const &b);
+
+		static Fixed	&max(Fixed &a, Fixed &b);
 		static const Fixed	&max(Fixed const &a, Fixed const &b);
-		// Public Methods
+
 		float	toFloat(void) const;
 		int	toInt(void) const;
 		// Getter
