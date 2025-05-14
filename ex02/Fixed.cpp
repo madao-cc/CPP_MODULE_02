@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 10:20:08 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 10:28:35 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 12:26:34 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,12 +141,21 @@ bool	Fixed::operator!=(Fixed const &src) const
 	return (this->toFloat() != src.toFloat());
 }
 
+// PRE-INCREMENT OPERATOR
+// THIS FUNCTION WILL INCREMENT THE FIXED POINT VALUE BY 1.
+// THIS IS DONE BY SHIFTING THE VALUE LEFT BY 1.
 Fixed	&Fixed::operator++()
 {
 	this->_value++;
 	return (*this);
 }
 
+// POST-INCREMENT OPERATOR
+// THIS FUNCTION WILL INCREMENT THE FIXED POINT VALUE BY 1.
+// THIS IS DONE BY SHIFTING THE VALUE LEFT BY 1.
+// THE ORIGINAL VALUE IS STORED IN A TEMPORARY VARIABLE.
+// THE TEMPORARY VARIABLE IS RETURNED AFTER THE INCREMENT.
+// THIS ALLOWS THE ORIGINAL VALUE TO BE USED BEFORE THE INCREMENT.
 Fixed	Fixed::operator++(int)
 {
 	Fixed	tmp(*this);
@@ -154,12 +163,21 @@ Fixed	Fixed::operator++(int)
 	return (tmp);
 }
 
+// PRE-DECREMENT OPERATOR
+// THIS FUNCTION WILL DECREMENT THE FIXED POINT VALUE BY 1.
+// THIS IS DONE BY SHIFTING THE VALUE LEFT BY 1.
 Fixed	&Fixed::operator--()
 {
 	this->_value--;
 	return (*this);
 }
 
+// POST-DECREMENT OPERATOR
+// THIS FUNCTION WILL DECREMENT THE FIXED POINT VALUE BY 1.
+// THIS IS DONE BY SHIFTING THE VALUE LEFT BY 1.
+// THE ORIGINAL VALUE IS STORED IN A TEMPORARY VARIABLE.
+// THE TEMPORARY VARIABLE IS RETURNED AFTER THE DECREMENT.
+// THIS ALLOWS THE ORIGINAL VALUE TO BE USED BEFORE THE DECREMENT.
 Fixed	Fixed::operator--(int)
 {
 	Fixed	tmp(*this);

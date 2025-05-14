@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:53:55 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/13 17:48:24 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 11:16:02 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,13 @@ class	Fixed
 		~Fixed();
 		// Overload Operators
 		Fixed	&operator=(Fixed const &src);
-		// Public Methods
-		float	toFloat(void) const;
-		int	toInt(void) const;
-			
 		// Getter
 		int	getRawBits(void) const;
 		// Setter
 		void	setRawBits(int const raw);
+		// Public Methods
+		float	toFloat(void) const;
+		int	toInt(void) const;
 };
 
 std::ostream	&operator<<(std::ostream &out, Fixed const &value);

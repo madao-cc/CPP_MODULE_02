@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 10:48:01 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 11:31:25 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 12:39:01 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class	Point
 		// Constructors
 		Point();
 		Point(const float x, const float y);
+		// Copy Constructor
 		Point(const Point &src);
 		// Destructor
 		~Point();

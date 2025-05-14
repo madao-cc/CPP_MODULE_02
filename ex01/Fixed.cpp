@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:57:45 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 09:36:52 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 11:36:12 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ Fixed::Fixed(const Fixed &src)
 // THIS FUNCTION WILL CONVERT THE FIXED POINT VALUE TO A FLOATING POINT VALUE.
 // THIS DIVIDES THE FIXED POINT VALUE BY 256.
 // MOVING THE FRACTIONAL PART BACK TO THE CORRECT POSITION.
+// WE USE THE '.0' TO ENSURE THAT THE RESULT IS A FLOATING POINT VALUE.
 float	Fixed::toFloat(void) const
 {
 	return (this->_value / 256.0);
@@ -80,7 +81,7 @@ void	Fixed::setRawBits(int const raw)
 
 Fixed	&Fixed::operator=(Fixed const &src)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Copy assignation operator called" << std::endl;
 	this->_value = src.getRawBits();
 	return (*this);
 }

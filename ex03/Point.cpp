@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:09:23 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 11:25:43 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 12:40:15 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ Fixed	Point::getY(void) const
 	return (this->_y);
 }
 
-/* Point	&Point::operator=(Point const &src)
+// The assignment operator is deleted because _x and _y are const members.
+Point	&Point::operator=(Point const &src)
 {
-	std::cout << "Assignation operator called" << std::endl;
-	this->_x = src.getX();
-	this->_y = src.getY();
+	// std::cout << "Point assignment operator called" << std::endl;
+	(void)src;
 	return (*this);
-} */
+}
 
 std::ostream	&operator<<(std::ostream &out, Point const &value)
 {

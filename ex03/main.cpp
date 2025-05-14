@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 10:41:37 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/03/17 12:13:52 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 12:42:24 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
 	Point a(0, 0);
 	Point b(1, 1);
 	Point c(0, 2);
+	Point d(-1, -1);
 
 	std::cout << std::endl << "Triangle vertices: " << a << ", " << b << ", " << c << std::endl;
 
@@ -50,6 +51,10 @@ int main(void)
 	test_point(a, b, c, very_close_outside);
 	test_point(a, b, c, negative);
 	test_point(a, b, c, float_point);
+	test_point(a, b, c, d);
+	test_point(a, d, c, b);
+	test_point(a, d, c, inside);
+	test_point(a, d, c, outside);
 
 	std::cout << std::endl;
 	
