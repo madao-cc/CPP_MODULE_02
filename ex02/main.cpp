@@ -6,7 +6,7 @@
 /*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 10:41:37 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/14 12:30:16 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/14 15:47:43 by mikelitoris      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,40 @@ int main(void)
 	const Fixed cc(2.02f);
 	std::cout << GREEN << "min(const cb, cc) = " << Fixed::min(cb, cc) << RESET << "   " << YELLOW << "Expected: 2.01953" << RESET << std::endl;
 	std::cout << GREEN << "max(const cb, cc) = " << Fixed::max(cb, cc) << RESET << "   " << YELLOW << "Expected: 5.05078" << RESET << std::endl;
+	
+	// Non-const tests
+	Fixed l(10);
+	Fixed m(20);
+	std::cout << "-- Non-const Min/Max Tests --" << std::endl;
+	std::cout << GREEN << "Testing non-const min and max:" << RESET << std::endl;
+	Fixed &minResult = Fixed::min(l, m);
+	std::cout << GREEN << "min(l, m): " << minResult << RESET << "   " << YELLOW << "(Expected: 10)" << RESET << std::endl;
+	minResult = Fixed(5);
+	std::cout << GREEN << "After modifying minResult: l = " << l << ", m = " << m << RESET << "   " << YELLOW << "(Expected: l = 5, m = 20)" << RESET << std::endl;
+	Fixed &maxResult = Fixed::max(l, m);
+	std::cout << GREEN << "max(l, m): " << maxResult << RESET << "   " << YELLOW << "(Expected: 20)" << RESET << std::endl;
+	maxResult = Fixed(25);
+	std::cout << GREEN << "After modifying maxResult: l = " << l << ", m = " << m << RESET << "   " << YELLOW << "(Expected: l = 5, m = 25)" << RESET << std::endl << std::endl;
 
-	return 0;
+	// Const tests
+	const Fixed n(15);
+	const Fixed o(30);
+	std::cout << "-- Const Min/Max Tests --" << std::endl;
+	std::cout << GREEN << "Testing const min and max:" << RESET << std::endl;
+	const Fixed &constMinResult = Fixed::min(n, o);
+	std::cout << GREEN << "min(n, o): " << constMinResult << RESET << "   " << YELLOW << "(Expected: 15)" << RESET << std::endl;
+	const Fixed &constMaxResult = Fixed::max(n, o);
+	std::cout << GREEN << "max(n, o): " << constMaxResult << RESET << "   " << YELLOW << "(Expected: 30)" << RESET << std::endl << std::endl;
+
+	// Mixed const and non-const tests
+	Fixed p(50);
+	const Fixed q(40);
+	std::cout << "-- Mixed Const/Non-const Min/Max Tests --" << std::endl;
+	std::cout << GREEN << "Testing mixed const and non-const min and max:" << RESET << std::endl;
+	const Fixed &mixedMinResult = Fixed::min(p, q);
+	std::cout << GREEN << "min(p, q): " << mixedMinResult << RESET << "   " << YELLOW << "(Expected: 40)" << RESET << std::endl;
+	const Fixed &mixedMaxResult = Fixed::max(p, q);
+	std::cout << GREEN << "max(p, q): " << mixedMaxResult << RESET << "   " << YELLOW << "(Expected: 50)" << RESET << std::endl << std::endl;
+
+	return (0);
 }
