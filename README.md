@@ -117,14 +117,4 @@ This exercise showcases the full potential of ad-hoc polymorphism in C++.
 
 ---
 
-## Conclusion
-
-In this module, you have:
-
-* Learned the importance of orthodox canonical form to manage resources safely.
-* Practiced operator overloading to make classes intuitive and expressive.
-* Built a custom fixed-point type that behaves much like a built-in numeric type.
-
-Now you are ready to tackle more advanced object-oriented design in C++ and prepare for inheritance and polymorphism in the next modules.
-
-✨ **Happy coding, and may your operators always overload gracefully!**
+Happy coding, and may your operators always overload gracefully!
