@@ -2,12 +2,6 @@
 
 This module focuses on C++’s powerful ability to define custom behavior for operators and emphasizes the importance of **orthodox canonical class form** (also known as the Rule of Three/Five). You will learn how to design classes that behave predictably when copied, assigned, or destroyed, while also practicing operator overloading for intuitive class usage.
 
-## The exercises in this module are:
-
-* **Exercise 00: My First Class in Orthodox Canonical Form** – Implement your first class using the canonical form (default constructor, copy constructor, copy assignment operator, and destructor).
-* **Exercise 01: Towards a More Useful Fixed-Point Class** – Expand your class with constructors, conversion functions, and operator overloads for stream output.
-* **Exercise 02: Now We’re Talking** – Extend your fixed-point class with arithmetic, comparison, and increment/decrement operators, making it behave more like a built-in type.
-
 ---
 
 ## Table of Contents
